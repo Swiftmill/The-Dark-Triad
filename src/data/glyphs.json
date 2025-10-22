@@ -1,0 +1,27 @@
+[
+  {
+    "id": "intro",
+    "real": "ENTER TEMPLE",
+    "glyphs": ["ꖦꗃꕥ", "ᚷᛃᛞ", "𐌂𐌂𐌂", "⛧⸸⛧", "シ卍ネ", "⟁⟁⟁", "ᛉᛉᛉ"]
+  },
+  {
+    "id": "library",
+    "real": "DECIPHER CODEX",
+    "glyphs": ["卍テシ", "✦✹✦", "𐌋𐌄𐌉", "ᚠᚱᚨ", "ꗄꕧꗄ", "₪₪₪", "ᛗᚨᛉ"]
+  },
+  {
+    "id": "board",
+    "real": "COUNCIL BOARD",
+    "glyphs": ["₪卐₪", "⛤⛧⛤", "𐌁𐌔𐌃", "ᛞᚨᚱ", "ꗃꗃꗃ", "✣✣✣", "シシシ"]
+  },
+  {
+    "id": "tributes",
+    "real": "OFFER TRIBUTES",
+    "glyphs": ["ᛟᛟᛟ", "⩔⩔⩔", "𐌕𐌔𐌉", "ꖦꖦꖦ", "ネネネ", "卐シ卐", "✴✴✴"]
+  },
+  {
+    "id": "contact",
+    "real": "SUMMON US",
+    "glyphs": ["᛫᛫᛫", "シシ卍", "𐌂𐌄𐌃", "⛧✣⛧", "ꗃꕥꗃ", "₪₪卐", "ᚠᚨᚱ"]
+  }
+]

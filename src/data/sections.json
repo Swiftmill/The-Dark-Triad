@@ -1,0 +1,7 @@
+[
+  { "id": "intro", "label": "Intro" },
+  { "id": "library", "label": "Library" },
+  { "id": "board", "label": "Board" },
+  { "id": "tributes", "label": "Tributes" },
+  { "id": "contact", "label": "Contact" }
+]
