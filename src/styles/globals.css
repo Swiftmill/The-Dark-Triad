@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --bg-primary: #040405;
+    --bg-secondary: rgba(12, 12, 15, 0.92);
+    --text-primary: #f4f4f2;
+    --accent-gold-light: #e6c45b;
+    --accent-gold-dark: #9e6b10;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.08em;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23e6c45b' d='M7 0h2v16H7z'/%3E%3Cpath fill='%23e6c45b' d='M16 7v2H0V7z'/%3E%3C/svg%3E") 8 8, auto;
+  }
+}
+
+@layer components {
+  .scanlines {
+    position: relative;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 2px
+    );
+    mix-blend-mode: overlay;
+  }
+
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none"%3E%3Cfilter id="n" x="0" y="0" width="200%25" height="200%25"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="200" height="200" filter="url(%23n)" opacity="0.45"/%3E%3C/svg%3E');
+    z-index: 30;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 18px rgba(230, 196, 91, 0.35), 0 0 32px rgba(158, 107, 16, 0.35);
+  }
+
+  .halo {
+    position: absolute;
+    inset: auto;
+    border-radius: 9999px;
+    background: radial-gradient(circle at center, rgba(230, 196, 91, 0.18), transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.55) 40%, rgba(0, 0, 0, 0.8) 100%);
+    mix-blend-mode: multiply;
+  }
+
+  .glyph-button {
+    @apply rounded-xl border border-white/30 bg-white/5 px-6 py-3 text-[12px] uppercase tracking-[0.2em] text-white/70 transition-colors transition-opacity duration-300 ease-out backdrop-blur;
+  }
+
+  .glyph-button:focus-visible {
+    @apply outline-none ring-2 ring-gold-light/70 ring-offset-2 ring-offset-transparent;
+  }
+
+  .section {
+    @apply relative flex min-h-screen flex-col justify-center overflow-hidden bg-black/40 px-6 py-24 md:px-16 lg:px-24;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
